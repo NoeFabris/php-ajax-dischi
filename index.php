@@ -4,13 +4,24 @@ include "./db.php";
 
 // var_dump($albums);
 
+// function getSrcImg($imgUrl){
+    
+// }
+
+
 function functionUl($album){
 ?>
     <ul>
         <?php
         foreach ($album as $disk) {
             ?>
-            <li><?php echo $disk['title']?></li>
+            <li>
+                <img src="<?php echo $disk['poster']?>" alt="">
+                <h3><?php echo $disk['title']?></h3>
+                <p><?php echo $disk['author']?></p>
+                
+            
+            </li>
             <?php
         }
         ?>

@@ -1,3 +1,21 @@
-main div {
+main ul {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+main ul li {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 50px;
+}
+main ul li img {
+  width: 300px;
+  height: 300px;
+}
+main ul li p {
+  margin: 0 0;
+}
+main ul li p, main ul li h3 {
+  display: flex;
+  justify-content: center;
 }
