@@ -38,24 +38,44 @@ function functionUl($album){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <link rel="stylesheet" href="dist/app.css">
     <title>Disks</title>
 </head>
 <body>
 
-    <header>
-    
-        <h1>Albums</h1>
+    <section id="app">
 
-    </header>
-    <main>
-    
-        <div>
+        <header>
+        
+            <h1>Albums</h1>
 
-        <?php echo functionUl($albums) ?>
+        </header>
+        <main>
+        
+            <div>
 
-        </div>
-    
-    </main>
+                <ul>
+                
+                    <li v-for='(album, key) in albums.data' :key='index'>
+                        
+                        <img :src="album.poster" alt="">
+                        <h3>{{album.title}}</h3>
+                        <p>{{album.author}}</p>
+                        
+                    </li>
+
+                </ul>
+            
+            <!-- <?php echo functionUl($albums) ?> -->
+
+            </div>
+        
+        </main>
+
+    </section>
+
+    <script src="./script/script.js"></script>
 </body>
 </html>

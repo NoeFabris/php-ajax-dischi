@@ -14,7 +14,8 @@ $filters = [
 
 header('Content-Type: applications/json');
 
-// echo json_encode(paginateArray($albums, $page));
-echo json_encode(filteredData($albums, $filters));
+// $filteredData = filteredData($albums, $filters);
+
+echo json_encode(paginateArray($albums, $page));
 
 ?>
