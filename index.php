@@ -58,7 +58,7 @@ function functionUl($album){
 
                 <ul>
                 
-                    <li v-for='(album, key) in albums.data' :key='index'>
+                    <li v-for='(album, index) in albums.data' :key='index'>
                         
                         <img :src="album.poster" alt="">
                         <h3>{{album.title}}</h3>
